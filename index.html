@@ -64,19 +64,6 @@
             height: 32px;
             margin-right: 10px;
         }
-        .join-btn {
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 200px;
-            font-size: 16px;
-        }
-        .join-btn:hover {
-            background-color: #2980b9;
-        }
         /* HEADER */
         h1 {
             font-size: 24px;
@@ -168,83 +155,13 @@
         }
         /* VIDEO CONTAINER */
         .video-container {
+            display: block; /* Hiển thị video luôn ở trang success */
             margin: 20px 0;
         }
         .video-container video {
             width: 100%;
             max-width: 560px;
             border-radius: 8px;
-        }
-        /* COMMENT SECTION */
-        .comment-section {
-            margin-top: 20px;
-            text-align: left;
-        }
-        .comment-section h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .comment-section form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .comment-section textarea {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-            resize: vertical;
-            min-height: 80px;
-        }
-        .comment-section button {
-            background-color: #4a90e2;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .comment-section button:hover {
-            background-color: #357ab8;
-        }
-        .comments-container {
-            margin-top: 15px;
-            text-align: left;
-        }
-        .comment {
-            background: #f1f1f1;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        /* CONTACT BOX with Shake Animation */
-        @keyframes shake {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            10% { transform: translate(-1px, -2px) rotate(-1deg); }
-            20% { transform: translate(-3px, 0px) rotate(1deg); }
-            30% { transform: translate(3px, 2px) rotate(0deg); }
-            40% { transform: translate(1px, -1px) rotate(1deg); }
-            50% { transform: translate(-1px, 2px) rotate(-1deg); }
-            60% { transform: translate(-3px, 1px) rotate(0deg); }
-            70% { transform: translate(3px, 1px) rotate(-1deg); }
-            80% { transform: translate(-1px, -1px) rotate(1deg); }
-            90% { transform: translate(1px, 2px) rotate(0deg); }
-            100% { transform: translate(1px, -2px) rotate(-1deg); }
-        }
-        .contact-box {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: var(--primary-color);
-            color: var(--light-text);
-            padding: 10px 15px;
-            border-radius: var(--border-radius);
-            font-size: 16px;
-            animation: shake 0.5s infinite;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -305,7 +222,7 @@
         </div>
     </div>
 
-    <!-- PAGE TWO: Success / Webinar, Video and Comments -->
+    <!-- PAGE TWO: Success / Webinar -->
     <div id="pageTwo">
         <div class="success-icon">✔</div>
         <div class="success-msg">
@@ -321,29 +238,14 @@
                 Date &amp; Time: <span id="infoDateTime">Saturday, March 22, 2025 - 5:00 AM</span>
             </li>
         </ul>
-        <!-- Video Container: Video MP4 nhúng -->
+        <!-- Video Container: Hiển thị luôn video trên trang success -->
         <div class="video-container" id="videoContainer">
             <video controls>
                 <source src="posttermypham.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-
-        <!-- Comment Section -->
-        <div class="comment-section">
-            <h3>Bình Luận</h3>
-            <form id="commentForm">
-                <textarea id="commentText" placeholder="Your comment..." required></textarea>
-                <button type="submit">Gửi Bình Luận</button>
-            </form>
-            <div class="comments-container" id="commentsContainer"></div>
-        </div>
     </div>
-</div>
-
-<!-- Contact Box with Shake Animation -->
-<div class="contact-box">
-    Contact/Zalo: 0842098266
 </div>
 
 <script>
@@ -381,23 +283,6 @@
         let infoDateTime = document.getElementById('infoDateTime');
         infoDateTime.textContent = dateValue + ' - ' + timeValue;
     });
-
-    // Comment Form Handler
-    const commentForm = document.getElementById('commentForm');
-    commentForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        let commentText = document.getElementById('commentText').value;
-        if (commentText.trim() === "") return;
-        let commentElement = document.createElement('div');
-        commentElement.classList.add('comment');
-        commentElement.innerText = commentText;
-        document.getElementById('commentsContainer').appendChild(commentElement);
-        document.getElementById('commentText').value = "";
-    });
 </script>
 </body>
 </html>
-<<<<<<< HEAD
-=======
-
->>>>>>> 3f7ca51 (Lưu thay đổi trước khi pull)

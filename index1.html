@@ -220,32 +220,6 @@
             margin-bottom: 10px;
             font-size: 14px;
         }
-        /* CONTACT BOX with Shake Animation */
-        @keyframes shake {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            10% { transform: translate(-1px, -2px) rotate(-1deg); }
-            20% { transform: translate(-3px, 0px) rotate(1deg); }
-            30% { transform: translate(3px, 2px) rotate(0deg); }
-            40% { transform: translate(1px, -1px) rotate(1deg); }
-            50% { transform: translate(-1px, 2px) rotate(-1deg); }
-            60% { transform: translate(-3px, 1px) rotate(0deg); }
-            70% { transform: translate(3px, 1px) rotate(-1deg); }
-            80% { transform: translate(-1px, -1px) rotate(1deg); }
-            90% { transform: translate(1px, 2px) rotate(0deg); }
-            100% { transform: translate(1px, -2px) rotate(-1deg); }
-        }
-        .contact-box {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: var(--primary-color);
-            color: var(--light-text);
-            padding: 10px 15px;
-            border-radius: var(--border-radius);
-            font-size: 16px;
-            animation: shake 0.5s infinite;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -253,7 +227,7 @@
 <div class="container">
     <!-- PAGE ONE: Countdown, Promo, Registration Form -->
     <div id="pageOne">
-        <h1>NGÀY LỄ VÀNG - QUÀ TẶNG NGẬP TRÀN</h1>
+        <h1>NGÀY LỄ VÀNG - QUà TẶNG NGẬP TRÀN</h1>
         <p class="subtitle"><h2>BÙI THỊ YẾN NHI</h2></p>
 
         <!-- Countdown -->
@@ -331,19 +305,14 @@
 
         <!-- Comment Section -->
         <div class="comment-section">
-            <h3>Bình Luận</h3>
+            <h3>Leave a Comment</h3>
             <form id="commentForm">
                 <textarea id="commentText" placeholder="Your comment..." required></textarea>
-                <button type="submit">Gửi Bình Luận</button>
+                <button type="submit">Submit Comment</button>
             </form>
             <div class="comments-container" id="commentsContainer"></div>
         </div>
     </div>
-</div>
-
-<!-- Contact Box with Shake Animation -->
-<div class="contact-box">
-    Contact/Zalo: 0842098266
 </div>
 
 <script>
@@ -397,7 +366,3 @@
 </script>
 </body>
 </html>
-<<<<<<< HEAD
-=======
-
->>>>>>> 3f7ca51 (Lưu thay đổi trước khi pull)
